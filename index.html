@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #EAF1F8;
+            margin: 0;
+        }
+
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            color: #183C63;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #D0DCE8;
+        }
+
+        article:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #FFFFFF;
+            border: 2px solid #183C63;
+            border-radius: 16px;
+            padding: 4px 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button span {
+            margin-left: 6px;
+            color: #183C63;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+
+    <main>
+        <article>
+            <img src="imagem-blog.svg"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Kaic</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da
+                    área de tecnologia.</p>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog.svg"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+            <div>
+                <h2>HTML, CSS e JavaScript: quem faz o quê?</h2>
+                <p class="artigo-autor">Por: Kaic</p>
+                <p>Toda página web usa três linguagens juntas: o HTML cria a estrutura, o CSS cuida do visual e o
+                    JavaScript dá vida às interações, como os botões de curtir aqui embaixo.</p>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog.svg"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+            <div>
+                <h2>Likes e autoestima</h2>
+                <p class="artigo-autor">Por: Kaic</p>
+                <p>Curtidas são divertidas, mas não medem o nosso valor. Por isso, neste blog cada pessoa só pode
+                    curtir uma vez, e pode desfazer a curtida clicando de novo.</p>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+
+            botao.addEventListener("click", botaoClicado);
+
+            function botaoClicado() {
+                let texto = botao.querySelector("span");
+
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

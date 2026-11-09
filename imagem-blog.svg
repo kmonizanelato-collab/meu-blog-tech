@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect width="80" height="80" rx="16" fill="#183C63"/>
+  <!-- lâmpada de ideia -->
+  <circle cx="40" cy="22" r="9" fill="#FFD54F"/>
+  <rect x="36" y="30" width="8" height="5" rx="1.5" fill="#E0E0E0"/>
+  <path d="M40 16 v4 M36 22 h-2 M46 22 h-2" stroke="#183C63" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- circuitos -->
+  <path d="M14 30 h8 v6 M66 30 h-8 v6" stroke="#64B5F6" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="14" cy="30" r="2.5" fill="#64B5F6"/>
+  <circle cx="66" cy="30" r="2.5" fill="#64B5F6"/>
+  <!-- livro aberto -->
+  <path d="M40 46 C32 40 22 40 14 42 V64 C22 62 32 62 40 68 Z" fill="#FFFFFF"/>
+  <path d="M40 46 C48 40 58 40 66 42 V64 C58 62 48 62 40 68 Z" fill="#E3F2FD"/>
+  <path d="M19 49 C25 48 31 48 35 51 M19 55 C25 54 31 54 35 57 M45 51 C49 48 55 48 61 49 M45 57 C49 54 55 54 61 55" stroke="#64B5F6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
