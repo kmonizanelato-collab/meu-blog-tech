@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <rect width="80" height="80" rx="16" fill="#183C63"/>
+  <!-- janela de editor de código -->
+  <rect x="10" y="12" width="60" height="56" rx="6" fill="#0F2742"/>
+  <circle cx="17" cy="19" r="2" fill="#EF5350"/>
+  <circle cx="24" cy="19" r="2" fill="#FFD54F"/>
+  <circle cx="31" cy="19" r="2" fill="#66BB6A"/>
+  <!-- três blocos: HTML (laranja), CSS (azul), JS (amarelo) -->
+  <rect x="16" y="28" width="34" height="8" rx="3" fill="#FF7043"/>
+  <rect x="16" y="41" width="44" height="8" rx="3" fill="#42A5F5"/>
+  <rect x="16" y="54" width="26" height="8" rx="3" fill="#FFD54F"/>
+</svg>

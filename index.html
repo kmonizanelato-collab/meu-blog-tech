@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<!--
+    Critérios que uma boa página como a minha deve atender:
+    1. Leitura confortável: texto com bom contraste e espaço entre as linhas.
+    2. Imagem coerente: cada imagem combina com o texto do seu post e tem um alt que a descreve.
+    3. Autoria clara: todo post mostra quem escreveu.
+
+    Alteração feita para atender melhor ao critério 1:
+    adicionei "line-height: 1.6" no body, deixando mais espaço entre as linhas do texto.
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +20,7 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: #EAF1F8;
             margin: 0;
+            line-height: 1.6;
         }
 
         header {
@@ -19,6 +30,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
+            border-bottom: 6px solid #FFD54F;
         }
 
         main {
@@ -34,10 +46,6 @@
             gap: 16px;
             padding: 16px 0;
             border-bottom: 1px solid #D0DCE8;
-        }
-
-        article:last-child {
-            border-bottom: none;
         }
 
         img {
@@ -58,6 +66,7 @@
             border: 2px solid #183C63;
             border-radius: 16px;
             padding: 4px 12px;
+            margin-bottom: 4px;
             font-size: 16px;
             cursor: pointer;
         }
@@ -65,6 +74,33 @@
         button span {
             margin-left: 6px;
             color: #183C63;
+        }
+
+        /* Post diferente: os elementos ficam um embaixo do outro, em um bloco destacado */
+        .post-diferente {
+            flex-direction: column;
+            background-color: #EAF1F8;
+            border-left: 6px solid #183C63;
+            border-bottom: none;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            gap: 8px;
+        }
+
+        .post-diferente h2,
+        .post-diferente p,
+        .post-diferente ul {
+            margin: 0;
+        }
+
+        .post-diferente img {
+            width: 200px;
+            height: 100px;
+        }
+
+        .post-diferente li {
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -78,20 +114,30 @@
     <main>
         <article>
             <img src="imagem-blog.svg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+                alt="Logotipo do blog: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito, representando tecnologia e educação. Cores em tons de azul, branco e amarelo.">
             <div>
                 <h2>Meu primeiro post</h2>
                 <p class="artigo-autor">Por: Kaic</p>
                 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da
                     área de tecnologia.</p>
+
+                <!--
+                    Botões de reação:
+                    - <button> é o botão que a pessoa clica. Dentro dele fica o emoji da reação.
+                    - <span> guarda só o número de curtidas, que começa em 0.
+                      O span é usado porque assim o JavaScript consegue encontrar e mudar
+                      apenas o número, sem apagar o emoji que está ao lado dele.
+                -->
                 <button>❤️<span>0</span></button>
                 <button>👍<span>0</span></button>
+                <button>😂<span>0</span></button>
+                <button>🚀<span>0</span></button>
             </div>
         </article>
 
         <article>
-            <img src="imagem-blog.svg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+            <img src="imagem-codigo.svg"
+                alt="Janela de um editor de código com três blocos coloridos: laranja para o HTML, azul para o CSS e amarelo para o JavaScript, as três linguagens que formam uma página web.">
             <div>
                 <h2>HTML, CSS e JavaScript: quem faz o quê?</h2>
                 <p class="artigo-autor">Por: Kaic</p>
@@ -99,12 +145,14 @@
                     JavaScript dá vida às interações, como os botões de curtir aqui embaixo.</p>
                 <button>❤️<span>0</span></button>
                 <button>👍<span>0</span></button>
+                <button>😂<span>0</span></button>
+                <button>🚀<span>0</span></button>
             </div>
         </article>
 
         <article>
-            <img src="imagem-blog.svg"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto com uma lâmpada de ideia acesa acima dele, cercado por linhas de circuito. Cores em tons de azul, branco e amarelo.">
+            <img src="imagem-curtidas.svg"
+                alt="Tela de celular mostrando um coração vermelho com o contador marcando apenas 1 curtida, representando a ideia de que cada pessoa só pode curtir uma vez.">
             <div>
                 <h2>Likes e autoestima</h2>
                 <p class="artigo-autor">Por: Kaic</p>
@@ -112,25 +160,68 @@
                     curtir uma vez, e pode desfazer a curtida clicando de novo.</p>
                 <button>❤️<span>0</span></button>
                 <button>👍<span>0</span></button>
+                <button>😂<span>0</span></button>
+                <button>🚀<span>0</span></button>
             </div>
+        </article>
+
+        <!--
+            Post diferente dos outros:
+            - o título e a autoria vêm antes da imagem;
+            - a imagem é maior e fica embaixo do título;
+            - o texto usa uma lista (ul) em vez de só um parágrafo;
+            - os botões ficam separados dentro de um <footer> do artigo.
+        -->
+        <article class="post-diferente">
+            <h2>Meus atalhos favoritos do VS Code</h2>
+            <p class="artigo-autor">Por: Kaic</p>
+
+            <img src="imagem-atalhos.svg"
+                alt="Teclado de computador com as teclas Alt e F5 destacadas em amarelo, representando os atalhos de teclado usados no VS Code e no navegador.">
+
+            <p>Durante o curso aprendi alguns atalhos que deixam a programação bem mais rápida:</p>
+            <ul>
+                <li><strong>html:5 + Enter</strong>: cria a estrutura básica de uma página HTML.</li>
+                <li><strong>Alt + seta para cima ou para baixo</strong>: move a linha de código.</li>
+                <li><strong>Shift + Alt + F</strong>: organiza (formata) todo o código.</li>
+                <li><strong>F2</strong>: renomeia um arquivo.</li>
+                <li><strong>Windows + V</strong>: abre os emojis para colar no código.</li>
+                <li><strong>F5</strong>: atualiza a página no navegador para ver as mudanças.</li>
+            </ul>
+
+            <footer>
+                <button>❤️<span>0</span></button>
+                <button>👍<span>0</span></button>
+                <button>😂<span>0</span></button>
+                <button>🚀<span>0</span></button>
+            </footer>
         </article>
     </main>
 
     <script>
+        // Seleciona TODOS os botões da página e guarda essa lista na variável "botoes".
         const botoes = document.querySelectorAll("button");
 
+        // O forEach passa por cada botão da lista, um de cada vez.
         botoes.forEach(function (botao) {
+            // Cada botão tem a sua própria variável "curtiu".
+            // Ela começa como false porque ninguém curtiu ainda.
             let curtiu = false;
 
+            // Fica "ouvindo" o botão: quando ele for clicado, executa a função botaoClicado.
             botao.addEventListener("click", botaoClicado);
 
             function botaoClicado() {
+                // Procura o <span> que está dentro do botão clicado (é ele que guarda o número).
                 let texto = botao.querySelector("span");
 
+                // O === compara o valor e o tipo: aqui verifica se "curtiu" é exatamente false.
                 if (curtiu === false) {
+                    // Ainda não tinha curtido: soma 1 ao número e marca como curtido.
                     texto.textContent++;
                     curtiu = true;
                 } else {
+                    // Já tinha curtido: tira 1 do número e desmarca a curtida.
                     texto.textContent--;
                     curtiu = false;
                 }
